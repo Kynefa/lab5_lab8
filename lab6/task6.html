@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const checkBrackets = (str) => {
+  const stack = [];
+  const brackets = {
+    ')': '(',
+    '}': '{',
+    ']': '['
+  };
+  
+  for (const char of str) {
+    if (Object.values(brackets).includes(char)) {
+      stack.push(char);
+    }                                      
+    else if (Object.keys(brackets).includes(char)) {
+      if (stack.length === 0 || stack.pop() !== brackets[char]) {
+        return false;
+      }
+    }  
+  }
+  return stack.length === 0;
+};
+
+const validCode = " { if (true) { console.log('Hello, world!'); } }";
+const invalidCode = " { if (true) { console.log('Hello, world!'); }";
+
+console.log(checkBrackets(validCode)); 
+console.log(checkBrackets(invalidCode)); 
+
+    </script>
+</body>
+</html>

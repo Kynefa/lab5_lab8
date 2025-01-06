@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function createProduct(obj, callback) {
+        const product = { ...obj, id: Date.now().toString() };
+        callback(product);
+    }
+    
+    function logProduct(product) {
+        console.log('Product:', product);
+    }
+    
+    function logTotalPrice(product) {
+        const totalPrice = product.price * product.quantity;
+        console.log('Total Price:', totalPrice);
+    }
+    
+    const product = { name: 'Laptop', price: 1000, quantity: 3 };
+    
+    createProduct(product, logProduct);
+    createProduct(product, logTotalPrice);
+    </script>
+</body>
+</html>

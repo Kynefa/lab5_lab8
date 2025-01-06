@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5</title>
+    <style>
+       
+        .taskTitle {
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #place {
+            width: 150px;
+            height: 300px;
+            background-color: green;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="taskTitle">ЗАВДАННЯ 5</div>
+    <div id="place"></div>
+
+    <script>
+        const placeDiv = document.getElementById('place');
+
+        window.addEventListener('click', (event) => {
+            const clickedInsideDiv = placeDiv.contains(event.target);
+            console.log(clickedInsideDiv); 
+        });
+    </script><link rel="stylesheet" href="style.css">
+</body>
+</html>

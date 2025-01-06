@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    input, button {
+        margin: 10px;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+<h1>ЗАВДАННЯ №1</h1>
+<button id="showButton">SHOW ME</button>
+<input type="text" id="inputField" placeholder="Enter text here">
+
+<script>
+
+    const button = document.getElementById ("showButton");
+    const inputField = document.getElementById("inputField");
+    button.addEventListener("click", () => {
+        const inputValue = inputField.value; 
+        console.log(inputValue);
+    });
+</script> <link rel="stylesheet" href="style.css">
+</body>
+</html>

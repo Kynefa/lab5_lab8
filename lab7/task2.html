@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3</title>
+    <style>
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        input {
+            padding: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ЗАВДАННЯ 3</h2>
+        <input type="password" id="passwordInput" value="пароль">
+        <button id="toggleButton">Розкрити</button>
+    </div>
+
+    <script>
+        const passwordInput = document.getElementById('passwordInput');
+        const toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.addEventListener('click', () => {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleButton.textContent = 'Приховати';
+            } else {
+                passwordInput.type = 'password';
+                toggleButton.textContent = 'Розкрити';
+            }
+        });
+    </script><link rel="stylesheet" href="style.css">
+</body>
+</html>

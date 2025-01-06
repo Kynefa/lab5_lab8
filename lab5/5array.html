@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Форма реєстрації</h2>
+    <form id="registrationForm">
+        <label>Ім'я*: <input type="text" id="name" required></label>
+        <span class="error" id="nameError"></span><br>
+        <label>Вік*: <input type="text" id="age" required></label>
+        <span class="error" id="ageError"></span><br>
+        <label>Дата народження (DD.MM.YYYY): <input type="text" id="birthDate"></label>
+        <span class="error" id="birthDateError"></span><br>
+        <label>Пароль*: <input type="password" id="password" required></label>
+        <span class="error" id="passwordError"></span><br>
+        <label>Повторіть пароль*: <input type="password" id="confirmPassword" required></label>
+        <span class="error" id="confirmPasswordError"></span><br>
+        <button type="submit">Реєстрація</button>
+    </form>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            let isValid = true;
+
+            document.querySelectorAll(".error").forEach(error => error.textContent = "");
+
+            const name = document.getElementById("name").value.trim();
+            if (!name) {
+                document.getElementById("nameError").textContent = "Поле є обов'язковим.";
+                isValid = false;
+            }
+
+            const age = document.getElementById("age").value.trim();
+            if (!age || !/^\d+$/.test(age)) {
+                document.getElementById("ageError").textContent = "Введіть ціле число.";
+                isValid = false;
+            }
+            const birthDate = document.getElementById("birthDate").value.trim();
+            if (birthDate && !/^\d{2}\.\d{2}\.\d{4}$/.test(birthDate)) {
+                document.getElementById("birthDateError").textContent = "Формат дати має бути DD.MM.YYYY.";
+                isValid = false;
+            }
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+            if (!password) {
+                document.getElementById("passwordError").textContent = "Поле є обов'язковим.";
+                isValid = false;
+            }
+            if (password !== confirmPassword) {
+                document.getElementById("confirmPasswordError").textContent = "Паролі не співпадають.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Форма відправлена!");
+            }
+        });
+    </script>
+</body>
+
+</html>

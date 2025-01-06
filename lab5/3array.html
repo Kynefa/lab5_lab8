@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Масив</title>
+</head>
+
+<body>
+    <script>
+        function filterArray(numbers, value) {
+            console.log("Початковий масив:", numbers); 
+            console.log("Число для порівняння:", value);
+            let filteredArray = [];
+
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] > value) {
+                    filteredArray.push(numbers[i]);
+                }
+            }
+            return filteredArray;
+        }
+        console.log(filterArray([1, 2, 3, 5, 7, 9], 4));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Client {
+  #login;
+  #email;
+
+  constructor(login, email) {
+    this.#login = login;
+    this.#email = email;
+  }
+
+  get login() {
+    return this.#login;
+  }
+
+  set login(newLogin) {
+    this.#login = newLogin;
+  }
+
+  get email() {
+    return this.#email;
+  }
+
+  set email(newEmail) {
+    this.#email = newEmail;
+  }
+}
+
+const client = new Client('user123', 'user@example.com');
+console.log(client.login); // Виведе: user123
+console.log(client.email); // Виведе: user@example.com
+
+client.login = 'newUser456';
+client.email = 'new@example.com';
+console.log(client.login); 
+console.log(client.email); 
+
+    </script>
+</body>
+</html>

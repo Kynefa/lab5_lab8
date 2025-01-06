@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function makeTransaction(quantity, pricePerDroid) {
+            const totalPrice = Math.round(quantity * pricePerDroid * 100) / 100;
+            return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+        }
+
+        var arg1 = 1, arg2 = 1000;
+        console.log(arg1, arg2, makeTransaction(arg1, arg2));
+
+        var arg1 = 5, arg2 = 900.05
+        console.log(arg1, arg2, makeTransaction(arg1, arg2));
+    </script>
+
+</body>
+
+</html>
