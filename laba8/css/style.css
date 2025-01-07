@@ -33,7 +33,7 @@ h1 {
 }
 
 .basicLightbox__placeholder img {
-  max-width: 100%; 
-  max-height: 600px; 
+  max-width: 195%; 
+  max-height: 500px; 
   transform: scale(1.5)
 }

@@ -16,8 +16,8 @@ const images = [
       description: 'Опис зображення 3',
     },
     {
-      preview: 'https://www.purina.ru/sites/default/files/styles/ttt_image_510/public/2021-01/Yorkshire%20Terrier2.jpg?itok=gPlIljOh',
-      original: 'https://www.purina.ru/sites/default/files/styles/ttt_image_510/public/2021-01/Yorkshire%20Terrier2.jpg?itok=gPlIljOh',
+      preview: 'https://s1.tchkcdn.com/g-NTqYNbeFieGNR4rLHDD5pA/17/261240/660x480/f/0/f15_19f4078_dyka_pryroda_ruda_bilka.jpg',
+      original: 'https://s1.tchkcdn.com/g-NTqYNbeFieGNR4rLHDD5pA/17/261240/660x480/f/0/f15_19f4078_dyka_pryroda_ruda_bilka.jpg',
       description: 'Опис зображення 4',
     },
     {
